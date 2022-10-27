@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Edit Lyric - #{lyric.songName}
+        include includes/styles.pug
+    body 
+        include includes/header.pug
+        section.formArea 
+            h2 Edit Lyric 
+            form(action='/lyric/edit' method='POST')
+                input(type='hidden' name='lyricId' required='true'  value=lyric.lyricId)
+                label Song name
+                input(type='text' name='songName' required='true' value=lyric.songName)
+                label Artist
+                input(type='text' name='artist' required='true' value=lyric.artist )
+                label Year
+                input(type='number' name='year' required='true' value=lyric.year )
+                label Genre
+                input(type='text' name='genre' required='true' value=lyric.genre  )
+                label Lyric
+                textarea(name='lyric',rows=20 required='true' )=lyric.lyric
+                input(type='submit' value='Submit')
+            if error
+                span.errorMsg #{error}

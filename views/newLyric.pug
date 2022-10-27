@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Add New Lyric
+        include includes/styles.pug
+
+    body 
+        include includes/header.pug
+        section.formArea 
+            h2 Add New Lyric 
+            if error
+                span.errorMsg #{error}            
+            if multiError
+                each errorMsg in multiError
+                    span.errorMsg= errorMsg
+            form(action='/lyric/new', method='POST')
+                label Song name
+                input(type='text', name='songName', required='true')
+                label Artist
+                input(type='text', name='artist', required='true')
+                label Year
+                input(type='number', name='year', required='true')
+                label Genre
+                input(type='text', name='genre', required='true')
+                label Lyric
+                textarea(name='lyric', required='true',rows=20)
+                input(type='submit', value='Submit')

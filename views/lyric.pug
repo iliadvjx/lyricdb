@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title #{lyric.songName} Lyric
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js") 
+
+        include includes/styles.pug
+    body 
+        include includes/header.pug
+
+        section.lyricSection 
+            h2 #{lyric.songName}
+            h3#lyricArtist by #{lyric.artist}
+
+            div.lyricInfo
+                span Created At: #{lyric.createdAt ? new Date(lyric.createdAt).toLocaleDateString() : '-'} 
+                span Genre: #{lyric.genre}
+                span Year: #{lyric.year}
+
+            p.lyric #{lyric.lyric}
+
+            div.buttons
+                a#editBtn(href="/lyric/edit/"+lyric.lyricId) edit
+                button(data-lyricId=lyric.lyricId)#removeBtn remove
+
+        script(src="/scripts/main.js") 

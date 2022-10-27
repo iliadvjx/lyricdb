@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title My Lyrics Database
+        include includes/styles.pug
+    body 
+        include includes/header.pug
+        section.homeArea 
+            h2 Latest Lyrics
+            div.latestLyrics
+                each item in lyrics
+                    div.lyricCard
+                        h3
+                            a(href='/lyric/'+item.lyricId)= item.songName + ' by ' + item.artist
+                        div.lyricInfo
+                            span Created At: #{item.createdAt ? new Date(item.createdAt).toLocaleDateString() : '-'} 
+                            span= 'Genre: '+  item.genre 
+                        div.shortLyric
+                            p= item.lyric.substring(0, 80) + '....'

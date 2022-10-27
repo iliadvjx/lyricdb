@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Quicksand";
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  background: #79adff;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+}
+header ul li {
+  /* padding: 10px; */
+  list-style: none;
+  padding-right: 20px;
+}
+
+section {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+}
+
+section > h2 {
+  text-align: center;
+  margin: 20px;
+}
+.lyricCard {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.lyricCard h3 {
+  font-size: 1.3em;
+  color: #242424;
+}
+a:visited {
+  all: unset;
+}
+.shortLyric {
+  margin: 10px 0;
+}
+.lyricInfo {
+  color: #737373;
+  display: flex;
+}
+.lyricInfo span {
+  padding-right: 20px;
+}
+
+#lyricArtist {
+  text-align: center;
+  font-weight: 400;
+}
+
+section.lyricSection div.lyricInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+section.lyricSection p {
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+section.lyricSection .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+section.lyricSection .buttons button {
+  all: unset;
+  cursor: pointer;
+}
+section.lyricSection .buttons button:hover {
+  color: rgb(206, 57, 57);
+}
+
+section.formArea form {
+  display: flex;
+  flex-direction: column;
+}
+
+section.formArea form input {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+section.formArea form textarea {
+  font-family: "Quicksand";
+}
+section.formArea form input[type="submit"] {
+  /* margin-top: 20px; */
+  width: 30%;
+  margin: 20px auto;
+}
+
+span.errorMsg {
+  text-align: center;
+  color: #fd3535;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+div.notFoundArea {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.notFoundArea a {
+  padding-top: 20px;
+}
