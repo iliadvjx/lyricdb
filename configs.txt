@@ -1,2 +1,3 @@
 vless://83ec9463-0a86-415f-da86-6b3c43e83aff@fr30.ghostnet.shop:443?type=ws&security=tls&path=%2Fd52608d7&sni=fr30.ghostnet.shop#GhostSV-FR2-1
 vless://1fab439b-4771-4de7-f380-a33508e4c6e4@fr30.ghostnet.shop:2083?type=grpc&security=tls&serviceName=gungun&sni=fr30.ghostnet.shop#GhostSV-FR2-2
+vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJSYWFjdG9yLVVTV1MiLAogICJhZGQiOiAidXMxLmdob3N0bmV0LnNob3AiLAogICJwb3J0IjogODQ0MywKICAiaWQiOiAiODljNDFkNTEtMWZkYS00YTcxLWQ5OTMtZmRmYTlmOTRlOTk1IiwKICAiYWlkIjogMCwKICAibmV0IjogIndzIiwKICAidHlwZSI6ICJub25lIiwKICAiaG9zdCI6ICIiLAogICJwYXRoIjogIi93cyIsCiAgInRscyI6ICJ0bHMiCn0=
